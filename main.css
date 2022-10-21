@@ -119,7 +119,7 @@ body main {
     margin: clamp(3rem, 10vw, calc(25vh - 16rem)) 0 clamp(3rem, 10vw, calc(15vh - 7rem)) 0;
 } .intro_ctnr .logo {
     width: clamp(4rem, 12vw, 5rem);
-    margin-bottom: clamp(3rem, 2vw, 4rem);
+    margin-bottom: clamp(3rem, 4vw, calc(30vh - 22rem));
 }
 
 h1 {
@@ -179,7 +179,7 @@ h1 {
     padding: 1.3rem 4rem;
     border: 0.1rem solid var(--colorA1);
     border-radius: 0.8rem;
-    font-size: clamp(1.4rem, 5vw, 1.6rem);
+    font-size: clamp(1.4rem, 5vw, 1.5rem);
     text-align: center;
 }
 
@@ -229,6 +229,9 @@ h1 {
 
 
 @media (min-width:800px) {
+    html {
+        font-size: 9.3px;
+    }
     h1 {
         font-size: 1.6rem;
     } h2 {
