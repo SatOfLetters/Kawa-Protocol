@@ -1,0 +1,265 @@
+html, body, p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    cursor: default;
+  }
+  
+  @font-face {
+    font-family: "Aeonik";
+    font-weight: 400;
+    src: url("assets/fonts/Aeonik-Regular.otf");
+  }
+  
+  @font-face {
+    font-family: "DMSans";
+    font-weight: 400;
+    src: url("assets/fonts/DMSans-Regular.ttf");
+  }
+  
+  @font-face {
+    font-family: "DMSans";
+    font-weight: 500;
+    src: url("assets/fonts/DMSans-Bold.ttf");
+  }
+  
+  :root {
+    --colorA1:#ffffff;
+    --colorA2:#89898b;
+
+    --colorB1:#131317;
+    --colorB2:#1c1c20;
+
+    --colorC1:#72B3FF;
+
+    --colorD1:#CCFFB4;
+  }
+  
+  html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--colorB1);
+    color: var(--colorA1);
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  body,
+  button,
+  input {
+    font-family: 'DMSans', sans-serif;
+  }
+
+  ::selection {
+    background-color:var(--colorD1);
+    color:var(--colorB1);
+  }
+
+  input:focus {
+    outline:none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: unset;
+    user-select: none;
+  }
+  
+  b {
+    font-weight: 900;
+  }
+  
+  img {
+    user-select: none;
+    max-width: 100%;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 9px;
+    height:9px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--colorB3);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--colorA1);
+    border-radius: 0.2rem;
+  }
+
+  .main_width {
+    width: clamp(10rem, 78vw, 91rem);
+    margin:0 auto;
+  }
+
+  .flex {
+    display: flex;
+  }
+  
+  /* END OF GLOBAL STYLES */
+
+
+
+
+
+
+
+
+
+
+
+body main {
+    width: clamp(20rem, 87vw, 105rem);
+    margin: 0 auto;
+}
+
+
+.intro_ctnr {
+    margin: clamp(3rem, 10vw, calc(25vh - 16rem)) 0 clamp(3rem, 10vw, calc(15vh - 7rem)) 0;
+} .intro_ctnr .logo {
+    width: clamp(4rem, 12vw, 5rem);
+    margin-bottom: clamp(3rem, 2vw, 4rem);
+}
+
+h1 {
+    font-weight: 100;
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    color: var(--colorA2);
+    line-height: 1.6;
+} h2 {
+    font-family: Aeonik, sans-serif;
+    font-size: clamp(3rem, 15.5vw, 11.5rem);
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 clamp(3rem, 10vw, 6rem);
+} h2 span {
+    background: -webkit-linear-gradient(180deg, var(--colorC1), var(--colorD1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} h2 sup {
+    width: clamp(1.5rem, 4vw, 3rem);
+    height: clamp(2rem, 4vw, 3rem);
+    background-image: url(assets/logo.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    background-size: contain;
+    transform: translate(30%, -20%);
+}
+
+
+.bullets {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1.8rem;
+    align-items: self-start;
+} .bullets article {
+    background-color: var(--colorB2);
+    border-radius: 0.8rem;
+    padding: 3rem clamp(2.5rem, 4vw, 4.5rem) 3rem clamp(2.5rem, 3vw, 4rem);
+    box-sizing: border-box;
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+} .bullets article img {
+    width: clamp(7rem, 22vw, 10rem);
+} .bullets h3 {
+    font-size: 1em;
+    font-weight: 400;
+    margin: 2rem 0 1rem;
+} .bullets article p {
+    font-size: 0.74em;
+    font-weight: 400;
+    color: var(--colorA2);
+    line-height: 1.6;
+}
+
+.soon {
+    margin: clamp(3rem, 20vw, calc(15vh - 8rem)) 0 3rem;
+    display: block;
+    padding: 1.3rem 4rem;
+    border: 0.1rem solid var(--colorA1);
+    border-radius: 0.8rem;
+    font-size: clamp(1.4rem, 5vw, 1.6rem);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+@media (min-width:800px) {
+    h1 {
+        font-size: 1.6rem;
+    } h2 {
+        margin: 0 0 3rem;
+    }
+
+    .bullets article {
+        font-size: 2rem;
+        flex: 1;
+    } .bullets article img {
+        width: 8rem;
+    }
+
+    .soon {
+        display: inline-block;
+        margin-bottom: unset;
+    }
+}
+
+
+  /* @media (min-width:1920px) {
+    html {
+        font-size:20px;
+    }
+  } @media (min-width:2440px) {
+    html {
+        font-size:24px;
+    }
+  } @media (min-width:3000px) {
+    html {
+        font-size:32px;
+    }
+  } */
+
